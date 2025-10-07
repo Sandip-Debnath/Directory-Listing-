@@ -20,8 +20,8 @@ function LoginInner() {
     const [loading, setLoading] = useState(false);
     const [serverErr, setServerErr] = useState("");
     const [form, setForm] = useState({
-        email_or_mobile: "",
-        password: "",
+        email_or_mobile: "sumanta@g.com",
+        password: "password",
         remember: false,
     });
 
