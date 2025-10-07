@@ -1,0 +1,93 @@
+/* src\app\dashboard\globals.css */
+
+/* Bring in dashboard vendor/theme styles */
+@import url('/assets/dashboard/assets/plugins/bootstrap/css/bootstrap.min.css');
+@import url('/assets/dashboard/assets/plugins/metisMenu/metisMenu.min.css');
+@import url('/assets/dashboard/assets/plugins/fontawesome/css/all.min.css');
+@import url('/assets/dashboard/assets/plugins/toastr/toastr.css');
+@import url('/assets/dashboard/assets/plugins/datatables/dataTables.bootstrap5.min.css');
+@import url('/assets/dashboard/assets/dist/css/app.min.css');
+@import url('/assets/dashboard/assets/dist/css/style.css');
+@import url('/assets/dashboard/assets/plugins/magnific-Popup/magnific-popup.css');
+
+/* Hide site chrome only inside dashboard routes (after mount) */
+body.dashboard header,
+body.dashboard footer {
+  display: none !important;
+}
+/* --- MOBILE FIX: ≤768px --- */
+@media (max-width: 767.98px) {
+  /* Never push content on phones */
+  .content-wrapper,
+  .main-content {
+    margin-left: 0 !important;
+    padding-left: 0 !important;
+  }
+
+  /* Navbar should not shift when .navbar gets .active from the theme JS */
+  .navbar-custom-menu.navbar,
+  .navbar-custom-menu.navbar.active {
+    left: 0 !important;
+    width: 100% !important;
+  }
+
+  /* Sidebar = off-canvas from the left */
+  .sidebar {
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    height: 100dvh;
+    max-height: 100dvh;
+    overflow-y: auto;
+    transform: translateX(-100%);
+    transition: transform .25s ease;
+    z-index: 1050; /* above content */
+  }
+  /* When your #sidebarCollapse handler toggles .active, slide it in */
+  .sidebar.active {
+    transform: translateX(0);
+  }
+
+  /* Dim the page when sidebar is open */
+  .overlay {
+    display: none;
+  }
+  .overlay.active {
+    display: block;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,.35);
+    z-index: 1040;
+  }
+
+  .sidebar-body{
+    max-height: calc(100dvh - 72px); /* 72px = your sidebar header height */
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch; /* smooth iOS scrolling */
+  }
+}
+
+/* --- DESKTOP ONLY: re-enable the pushed layout (optional) --- */
+@media (min-width: 768px) {
+  /* If your theme expects pushed content on desktop, restore it here. 
+     Adjust 240px to your sidebar width. */
+  /* .content-wrapper {
+    margin-left: 240px;
+  } */
+}
+
+@media (max-width: 991px) {
+  .navbar .navbar-nav {
+      padding-top: 0rem;
+  }
+}
+@media (max-width: 991px) {
+  .navbar-nav {
+      margin-top: 0rem;
+  }
+}
+
+.card-header, .card-footer {
+  width: 100%;
+  margin: 0px;
+}

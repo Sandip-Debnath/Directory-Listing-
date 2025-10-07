@@ -1,0 +1,19 @@
+/* app/globals.css */
+
+/* --- Plugin CSS (served from /public) --- */
+@import url('/assets/plugins/bootstrap/css/bootstrap.min.css');
+@import url('/assets/plugins/fontawesome/css/all.min.css');
+@import url('/assets/plugins/aos/aos.min.css');
+@import url('/assets/plugins/OwlCarousel2/css/owl.carousel.min.css');
+@import url('/assets/plugins/OwlCarousel2/css/owl.theme.default.min.css');
+@import url('/assets/plugins/jquery-fancyfileuploader/fancy-file-uploader/fancy_fileupload.css');
+@import url('/assets/plugins/ion.rangeSlider/ion.rangeSlider.min.css');
+@import url('/assets/plugins/magnific-popup/magnific-popup.css');
+@import url('/assets/plugins/select2/select2.min.css');
+@import url('/assets/plugins/select2-bootstrap-5/select2-bootstrap-5-theme.min.css');
+
+/* --- Your theme/global CSS --- */
+@import url('/assets/css/style.css');   /* adjust if your main css is elsewhere */
+
+/* Optional basics */
+html, body { height: 100%; }
